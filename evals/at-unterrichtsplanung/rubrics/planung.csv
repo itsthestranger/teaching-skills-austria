@@ -1,0 +1,10 @@
+dimension,kriterium,pass_schwelle,gewicht
+kompetenz_grounding,"Kompetenzbeschreibung wörtlich, korrekte ID, RIS-Quelle (NOR/Stand) referenziert",erfuellt,3
+progression,"Spiralprinzip / ""Wiederholen und Festigen""-Rückbezüge korrekt (finde_progression)",erfuellt,2
+anwendungsbereiche,"verbindlich vs. ""allenfalls"" sauber getrennt",erfuellt,2
+lehrstoff,"Lehrstoff je lehrstoff_quelle korrekt (MS aus Anwendungsbereichen, VS eigen)",erfuellt,1
+bildungsstandard,"Crosswalk auf Bereichsebene mit dokumentierter Begründung; SU ⇒ abgedeckt:false",erfuellt,2
+uebergreifende_themen,"übergreifende Themen korrekt eingebunden (Tag/Chip)",erfuellt,1
+fehlvorstellungen,"kuratiert (mit quelle) und als ""nicht amtlich"" ausgewiesen",erfuellt,1
+dokument_integritaet,"Dokumenten-Set (unterrichtsplanung/schueler_material/beobachtungsbogen) rendert vollständig",erfuellt,2
+herkunftstrennung,"amtlicher RIS-Inhalt vs. docs/-Material klar getrennt ausgewiesen",erfuellt,3

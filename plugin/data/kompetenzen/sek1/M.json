@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "_hinweis": "Phase-0-Mini-Fixture (NICHT der vollstaendige Datensatz). Dient der Schema-Validierung (§ 5.7) und als Fixture fuer den kompetenz.py-Stub. Voller Mathe-Sek-I-Datensatz = Phase 1 (§ 11, § 15). Inhalt beim Build gegen die RIS-Quelle verifizieren (§ 0.1).",
+    "lehrplan_fassung": "LP2023 konsolidiert idF BGBl. II 178/2025",
+    "dataset_version": "0.1.0-fixture",
+    "band": "SEK1",
+    "fach": { "code": "M", "name": "Mathematik" },
+    "prozesse": ["Modellieren und Problemlösen", "Operieren", "Darstellen und Interpretieren", "Vermuten und Begründen"],
+    "uebergreifende_themen_fach": ["Informatische Bildung", "Wirtschafts-, Finanz- und Verbraucher:innenbildung"],
+    "differenzierungs_achse": {
+      "typ": "standard_standardplus",
+      "niveaus": ["Standard", "Standard AHS"],
+      "enrichment_quelle": "allenfalls",
+      "spiralprinzip_backlinks": true
+    },
+    "anwendungsbereiche_status": "item_flags",
+    "provenienz": {
+      "quelle": "RIS Bundesrecht konsolidiert",
+      "kurztitel": "Lehrpläne der Mittelschulen",
+      "nor": "NOR40271471",
+      "kundmachung": "BGBl. II Nr. 185/2012 idF BGBl. II Nr. 178/2025",
+      "anlage": "Anl. 1",
+      "teil": "ACHTER TEIL",
+      "stand": "2026-07-21"
+    }
+  },
+  "kompetenzbereiche": [
+    {
+      "id_teil": "ZAHLEN",
+      "name": "Zahlen und Maße",
+      "zentrales_konzept": "Zahlvorstellungen, Maße und das Rechnen mit Zahlen aller Zahlbereiche.",
+      "kompetenzen": [
+        {
+          "id": "AT.LP23.SEK1.M.ZAHLEN.K1.01",
+          "stufe": "K1",
+          "text": "Die Schülerinnen und Schüler können natürliche Zahlen, Dezimalzahlen und Bruchzahlen interpretieren, darstellen und vergleichen.",
+          "prozesse": ["Darstellen und Interpretieren"],
+          "uebergreifende_themen": [],
+          "vorlaeufer": [],
+          "folge": ["AT.LP23.SEK1.M.ZAHLEN.K2.01"],
+          "bildungsstandard_deskriptoren": ["M8.I1"],
+          "anwendungsbereiche": [
+            { "text": "Zahldarstellungen auf der Zahlengeraden", "verbindlich": true },
+            { "text": "Runden und Schätzen im Alltag", "verbindlich": true }
+          ],
+          "lehrstoff": [],
+          "lehrstoff_quelle": "aus_anwendungsbereichen",
+          "typische_fehlvorstellungen": [
+            {
+              "text": "Längere Dezimalzahl = größere Zahl (z. B. 0,45 > 0,7).",
+              "lehrkraft_hinweis": "Stellenwert explizit vergleichen; mit gleicher Nachkommastellenzahl auffüllen.",
+              "quelle": "Padberg/Wartha, Didaktik der Bruchrechnung (kuratiert, nicht amtlich)",
+              "amtlich": false
+            }
+          ],
+          "provenienz": {
+            "quelle": "RIS Bundesrecht konsolidiert",
+            "nor": "NOR40271471",
+            "kundmachung": "BGBl. II Nr. 185/2012 idF BGBl. II Nr. 178/2025",
+            "teil": "ACHTER TEIL",
+            "stand": "2026-07-21"
+          }
+        },
+        {
+          "id": "AT.LP23.SEK1.M.ZAHLEN.K2.01",
+          "stufe": "K2",
+          "text": "Die Schülerinnen und Schüler können mit Brüchen rechnen sowie Vielfache und Teiler bestimmen und Proportionalität und Prozentrechnung anwenden.",
+          "prozesse": ["Operieren", "Modellieren und Problemlösen"],
+          "uebergreifende_themen": ["Wirtschafts-, Finanz- und Verbraucher:innenbildung"],
+          "vorlaeufer": ["AT.LP23.SEK1.M.ZAHLEN.K1.01"],
+          "folge": [],
+          "bildungsstandard_deskriptoren": ["M8.I1"],
+          "anwendungsbereiche": [
+            { "text": "Bruchrechnung (Addition, Subtraktion, Multiplikation, Division)", "verbindlich": true },
+            { "text": "Prozentrechnung in Sachkontexten", "verbindlich": true, "wiederholung_von": ["AT.LP23.SEK1.M.ZAHLEN.K1.01"] },
+            { "text": "allenfalls: zusammengesetzte Zinsrechnung", "verbindlich": false }
+          ],
+          "lehrstoff": [],
+          "lehrstoff_quelle": "aus_anwendungsbereichen",
+          "typische_fehlvorstellungen": [
+            {
+              "text": "Beim Addieren von Brüchen werden Zähler und Nenner getrennt addiert (1/2 + 1/3 = 2/5).",
+              "lehrkraft_hinweis": "Gemeinsamen Nenner als Voraussetzung an Flächenmodellen sichtbar machen.",
+              "quelle": "Padberg/Wartha, Didaktik der Bruchrechnung (kuratiert, nicht amtlich)",
+              "amtlich": false
+            }
+          ],
+          "provenienz": {
+            "quelle": "RIS Bundesrecht konsolidiert",
+            "nor": "NOR40271471",
+            "kundmachung": "BGBl. II Nr. 185/2012 idF BGBl. II Nr. 178/2025",
+            "teil": "ACHTER TEIL",
+            "stand": "2026-07-21"
+          }
+        }
+      ]
+    }
+  ]
+}

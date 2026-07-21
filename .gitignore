@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# RIS-Rohdaten (regenerierbar über fetch_ris_resources.py; nicht ausgeliefert)
+data-pipeline/sources/*
+!data-pipeline/sources/.gitkeep
+resources/
+
+# B2-Ziel (post-release), nicht eingecheckt
+plugin/data/kompetenzgraph.sqlite
+
+# Lehrpersonen-Material: Ordner ist Laufzeit-Konvention; Inhalt nicht mit ausliefern
+docs/*
+!docs/README.md
+docs/.cache/
+
+# OS
+.DS_Store
+
+teaching-skills-austria-spec-v0_7-draft.md

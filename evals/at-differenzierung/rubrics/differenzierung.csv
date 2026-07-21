@@ -1,0 +1,9 @@
+dimension,kriterium,pass_schwelle,gewicht
+achse_fachrichtig,"achse.typ fachrichtig (Mathe: standard_standardplus; D/E: gers; sonst lehrplan_generisch)",erfuellt,3
+niveaus,"1 Differenzierungsplan + 3 Niveau-Materialien (unter/auf/über) erzeugt",erfuellt,3
+mathe_achse,"auf=verbindlich; über=allenfalls+Standard-AHS; unter=Kern+Vorklassen-Stützen",erfuellt,2
+sprachen_achse,"GERS-Niveaus aus Lehrplan/BiSt korrekt zugeordnet",erfuellt,2
+generische_achse,"grundlegend/erweitert/vertiefend an Nicht-Mathe-Beispiel demonstriert",erfuellt,1
+niveau_spalte,"Renderer-Block niveau_spalte rendert korrekt",erfuellt,2
+herkunftstrennung,"amtlicher Inhalt vs. docs/-Material sichtbar getrennt",erfuellt,3
+routing,"Differenzieren bestehender Einheit → at-differenzierung (nicht at-unterrichtsplanung)",erfuellt,1

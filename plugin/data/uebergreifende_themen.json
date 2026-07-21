@@ -1,0 +1,20 @@
+{
+  "_hinweis": "Snapshot Stand 2026-07 (§ 0.1) — beim Build gegen den RIS-Lehrplan-Volltext (VIERTER TEIL / didaktische Grundsätze) verifizieren. beitragende_faecher werden primär per Invertierung der Fach→Themen-Angaben befüllt (§ 10.1), NICHT aus der Übersichtsgrafik.",
+  "quelle": "RIS Lehrplan 2023 (VS NOR40271469 / MS NOR40271471), übergreifende Themen",
+  "stand": "2026-07-21",
+  "themen": [
+    { "id": "UT01", "name": "Bildungs-, Berufs- und Lebensorientierung", "beitragende_faecher": [] },
+    { "id": "UT02", "name": "Entrepreneurship Education", "beitragende_faecher": [] },
+    { "id": "UT03", "name": "Gesundheitsförderung", "beitragende_faecher": [] },
+    { "id": "UT04", "name": "Informatische Bildung", "beitragende_faecher": [] },
+    { "id": "UT05", "name": "Interkulturelle Bildung", "beitragende_faecher": [] },
+    { "id": "UT06", "name": "Medienbildung", "beitragende_faecher": [] },
+    { "id": "UT07", "name": "Politische Bildung", "beitragende_faecher": [] },
+    { "id": "UT08", "name": "Reflexive Geschlechterpädagogik und Gleichstellung", "beitragende_faecher": [] },
+    { "id": "UT09", "name": "Sexualpädagogik", "beitragende_faecher": [] },
+    { "id": "UT10", "name": "Sprachliche Bildung und Lesen", "beitragende_faecher": [] },
+    { "id": "UT11", "name": "Umweltbildung für nachhaltige Entwicklung", "beitragende_faecher": [] },
+    { "id": "UT12", "name": "Verkehrs- und Mobilitätsbildung", "beitragende_faecher": [] },
+    { "id": "UT13", "name": "Wirtschafts-, Finanz- und Verbraucher:innenbildung", "beitragende_faecher": [] }
+  ]
+}

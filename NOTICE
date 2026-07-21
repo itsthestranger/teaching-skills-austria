@@ -1,0 +1,31 @@
+teaching-skills-austria
+Copyright 2026 Phillip Stranger / strangeprojects
+
+This product includes software and skill designs derived from:
+
+  anthropics/k12-teacher-skills (Apache-2.0)
+  co-developed by Anthropic & Learning Commons.
+  Pinned upstream commit: 7c03c83db8223b050b6569ffbe14cd94e229396e
+  https://github.com/anthropics/k12-teacher-skills
+  The skills "at-unterrichtsplanung" and "at-differenzierung" are ports of the
+  upstream skills "k12-lesson-planning" and "k12-lesson-differentiation"
+  (renderer helpers under scripts/ and the lesson JSON schema).
+
+This product bundles curriculum data obtained exclusively from the Austrian
+Legal Information System (RIS, Rechtsinformationssystem des Bundes):
+
+  Republik Österreich — Bundeskanzleramt / BMBWF (RIS Bundesrecht konsolidiert)
+  - Lehrplan der Volksschule            (NOR40271469, Anl. 1)
+  - Lehrpläne der Mittelschulen         (NOR40271471, Anl. 1)
+  - Bildungsstandards-Verordnung        (NOR40255561, Anl. 1)
+
+  These are ordinances (Verordnungen) and therefore free works under § 7 UrhG
+  (no copyright protection); they may be reproduced verbatim. Attribution is not
+  legally required but is carried throughout as provenance (source, NOR, BGBl.,
+  retrieval date). Only the current consolidated version is used; the
+  authoritative version is the promulgated BGBl. text.
+
+NOT bundled (deliberately, RIS-only): IQS materials, Pädagogik-Paket
+competence grids/tasks, university projects. Such content is out of scope and
+would belong to an official connector or is contributed by teachers themselves
+via the docs/ folder (see spec § 4, § 7.6).

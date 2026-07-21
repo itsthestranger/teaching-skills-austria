@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://strangeprojects.com/schemas/teaching-skills-austria/kompetenzen.schema.json",
+  "title": "AT LP2023 Kompetenz-Shard",
+  "description": "Schema je Fach x Band: data/kompetenzen/<band>/<fach>.json. enums sind tolerante Defaults (Spec § 0.1): unbekannte Werte werden beim Build weich geprueft (uebernehmen + protokollieren), nicht verworfen.",
+  "type": "object",
+  "required": ["meta", "kompetenzbereiche"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["dataset_version", "band", "fach", "differenzierungs_achse", "anwendungsbereiche_status", "provenienz"],
+      "properties": {
+        "lehrplan_fassung": { "type": "string" },
+        "dataset_version": { "type": "string" },
+        "band": { "enum": ["PRIM", "SEK1"] },
+        "fach": {
+          "type": "object",
+          "required": ["code", "name"],
+          "properties": {
+            "code": { "type": "string" },
+            "name": { "type": "string" }
+          }
+        },
+        "prozesse": { "type": "array", "items": { "type": "string" } },
+        "uebergreifende_themen_fach": { "type": "array", "items": { "type": "string" } },
+        "differenzierungs_achse": { "type": "object", "required": ["typ"] },
+        "anwendungsbereiche_status": { "enum": ["optional_sektion", "item_flags"] },
+        "provenienz": { "type": "object" }
+      }
+    },
+    "kompetenzbereiche": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id_teil", "name", "kompetenzen"],
+        "properties": {
+          "id_teil": { "type": "string" },
+          "name": { "type": "string" },
+          "zentrales_konzept": { "type": "string" },
+          "kompetenzen": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "stufe", "text"],
+              "properties": {
+                "id": { "type": "string", "pattern": "^AT\\.LP23\\.(PRIM|SEK1)\\..+" },
+                "stufe": { "type": "string" },
+                "text": { "type": "string" },
+                "prozesse": { "type": "array", "items": { "type": "string" } },
+                "uebergreifende_themen": { "type": "array", "items": { "type": "string" } },
+                "vorlaeufer": { "type": "array", "items": { "type": "string" } },
+                "folge": { "type": "array", "items": { "type": "string" } },
+                "bildungsstandard_deskriptoren": { "type": "array", "items": { "type": "string" } },
+                "anwendungsbereiche": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["text", "verbindlich"],
+                    "properties": {
+                      "text": { "type": "string" },
+                      "verbindlich": { "type": "boolean" },
+                      "wiederholung_von": { "type": "array", "items": { "type": "string" } }
+                    }
+                  }
+                },
+                "lehrstoff": { "type": "array", "items": { "type": "string" } },
+                "lehrstoff_quelle": { "enum": ["aus_anwendungsbereichen", "eigen_ausgewiesen"] },
+                "typische_fehlvorstellungen": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["text", "amtlich"],
+                    "properties": {
+                      "text": { "type": "string" },
+                      "lehrkraft_hinweis": { "type": "string" },
+                      "quelle": { "type": "string" },
+                      "amtlich": { "const": false }
+                    }
+                  }
+                },
+                "provenienz": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
