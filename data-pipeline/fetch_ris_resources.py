@@ -141,12 +141,21 @@ def extract_refs(api_json: dict) -> tuple[list[dict], int]:
         tech = meta.get("Technisch", {})
         br_meta = meta.get("Bundesrecht", {})
         brk = br_meta.get("BrKons", {})
-        # Content-URLs aus Dokumentliste
+        # Content-URLs aus Dokumentliste. ContentReference kann ein Dict (nur
+        # Hauptdokument, z. B. VS/BiSt) ODER eine Liste sein (Hauptdokument +
+        # eingebettete Bilder, z. B. MS Anl. 1: 1 Xml/Html/Rtf/Pdf + 64 Png).
+        # Beide Faelle tolerieren (§ 0.1), sonst crasht der Anl.-1-Knoten.
         urls = {}
-        cref = data.get("Dokumentliste", {}).get("ContentReference", {})
-        for u in _as_list(cref.get("Urls", {}).get("ContentUrl")):
-            if isinstance(u, dict) and u.get("DataType") and u.get("Url"):
-                urls[u["DataType"].lower()] = u["Url"]
+        dokliste = data.get("Dokumentliste", {})
+        dokliste = dokliste if isinstance(dokliste, dict) else {}
+        for cref in _as_list(dokliste.get("ContentReference")):
+            if not isinstance(cref, dict):
+                continue
+            cref_urls = cref.get("Urls", {})
+            cref_urls = cref_urls if isinstance(cref_urls, dict) else {}
+            for u in _as_list(cref_urls.get("ContentUrl")):
+                if isinstance(u, dict) and u.get("DataType") and u.get("Url"):
+                    urls[u["DataType"].lower()] = u["Url"]
         out.append({
             "nor": tech.get("ID"),
             "kurztitel": br_meta.get("Kurztitel"),
