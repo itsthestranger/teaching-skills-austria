@@ -46,6 +46,12 @@ _GLYPH = {
     "br": "\n",
 }
 
+# Teilbaeume ohne verwertbaren Textwert. <binary> ist eine inline gerenderte
+# Formelgrafik: sie enthaelt nur den <src>-Bildpfad (…/hauptdokument.imgNNis.png),
+# der sonst als Pseudotext in den verbatim Wortlaut sickern wuerde (§ 0.2). Der
+# Teilbaum wird uebersprungen; der Folgetext (tail) bleibt erhalten.
+_SKIP_SUBTREE = {"binary"}
+
 _WS = re.compile(r"[ \t ]+")
 _NL = re.compile(r"\s*\n\s*")
 
@@ -67,6 +73,10 @@ def node_text(el: ET.Element) -> str:
 
     def walk(e: ET.Element) -> None:
         tag = local(e.tag)
+        if tag in _SKIP_SUBTREE:
+            if e.tail:
+                parts.append(e.tail)
+            return
         glyph = _GLYPH.get(tag)
         if glyph is not None:
             parts.append(glyph)
